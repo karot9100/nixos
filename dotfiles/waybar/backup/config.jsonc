@@ -1,0 +1,136 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["hyprland/workspaces", "cpu", "custom/nvidia"],
+  "modules-center": ["mpris"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "clock", "bluetooth", "network", "battery", "custom/power"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+     "persistent-workspaces": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": [],
+    }
+    
+  },
+
+"mpris": {
+	"format": "{status_icon}   {artist} - {title}",
+	"format-paused": "{status_icon}   {artist} - {title}",
+	"player-icons": {
+		"default": "󰎇",
+	},
+	"status-icons": {
+		"paused": "",
+    "playing": "",
+    "stopped": ""
+	},
+	// "ignored-players": ["firefox"]
+},
+
+
+  "bluetooth": {
+    "format": "",
+    "format-on": "{icon}",
+    "format-off": "{icon}", 
+    "format-connected":"{icon}",
+    "format-icons":{
+        "on":"",
+        "off": "󰂲",
+        "connected": "󰂱"
+        },
+    "on-click": "blueman-manager",
+    "tooltip-format-connected":"{device_enumerate}"
+  },
+
+  "clock": {
+    "timezone": "Europe/Brussels",
+    "tooltip": false,
+    "format": "󰥔 {:%H:%M:%S}",
+    "interval": 1
+  },
+  
+
+
+  "network": {
+    "format-wifi": "󰤢 ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤠 ",
+    "interval": 5,
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+
+ },
+
+  "cpu": {
+    "interval": 1,
+    "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "on-click": "alacritty -e btop"
+  },
+
+  "custom/nvidia": {
+    "exec": "~/.config/waybar/scripts/gpu-temp.sh","format": " {}",
+    "interval": 2,
+    "tooltip": false,
+    "return-type": "json"
+  },
+
+
+  
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +10% && swayosd-client --brightness +0",
+    "on-scroll-down": "brightnessctl set 10%- && swayosd-client --brightness -0"
+
+  },
+  
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+    "default": ["", "", "", "", " ", ""]
+    },
+    "on-click": "GTK_THEME=Adwaita:dark pwvucontrol",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+ && swayosd-client --output-volume +0",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && swayosd-client --output-volume -0"
+  },
+
+  "battery": {
+        "interval":2,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+  },
+
+  "custom/power": {
+    "exec": "~/.config/waybar/scripts/power-profile.sh",
+    "interval": 2,
+    "return-type": "json",
+    "on-click": "~/.config/waybar/scripts/power-cycle.sh",
+    "format": "{text}"
+  }
+
+
+
+}
+

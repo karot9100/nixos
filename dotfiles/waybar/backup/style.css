@@ -1,0 +1,145 @@
+* {
+   /* background: #24273a;*/
+    color: #ffffff;
+    font-family: "Lato", "monospace", sans-serif;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+window {
+    background: #24273a;
+}
+
+#waybar {
+    background: #24273a;
+}
+
+/*      all modules default look      */
+
+#cpu,
+#custom-nvidia,
+#mpris,
+#bluetooth,
+#network,
+#pulseaudio,
+#backlight,
+#clock,
+#battery {
+  padding: 0px 10px 0px 10px;
+  margin: 0px 2px 0px 2px;
+  border-radius: 10px;
+  color: #cad3f5;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+
+#workspaces {
+  padding: 0px 30px 0px 10px;
+  margin: 0px 2px 0px 2px;
+  border-radius: 10px;
+  color: #cad3f5; 
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#workspaces:hover {
+  border: 0px;
+}
+
+#cpu:hover,
+#custom-nvidia:hover,
+#mpris:hover,
+#bluetooth:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#clock:hover,
+#battery:hover {
+  background-color: #363a4f;
+}
+
+#network.disconnected {
+  color: #f5a97f;
+}
+
+
+#bluetooth.connected {
+  color: #7dc4e4;
+}
+
+
+/* Workspace buttons */
+#workspaces button {
+    padding: 0px 0px;
+    margin: 0px 4px;
+    border-radius: 10px;
+ /*   background: #24273a;   */  
+    background: transparent;     
+    color: #cad3f5;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    min-width: 26px;
+    min-height: 26px;
+}
+
+/* Active workspace */
+#workspaces button.active {
+  /*  background: #8aadf4; */    /* your Catppuccin “blue” accent */
+    color: #24273a;          /* text for contrast */
+}
+
+/* Workspace with windows */
+#workspaces button.occupied {
+  /*  background: #494d64;*/
+    color: #cad3f5;
+}
+
+/* Empty workspace */
+#workspaces button.empty {
+ /*   background: #363a4f;*/
+    color: #6e738d;
+}
+
+/* Hover effect */
+#workspaces button:hover {
+   /* background: #5b6078;*/
+    color: #ffffff;
+}
+
+#workspaces button * {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+#workspaces button label,
+#workspaces button image {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: #cad3f5;
+}
+#workspaces button:hover label,
+#workspaces button:hover image {
+    color: #a6da95;
+}
+#custom-power {
+  padding: 0px 10px 0px 10px;
+  margin: 0px 2px 0px 2px;
+  border-radius: 10px;
+  color: #cad3f5;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+#custom-power:hover {
+  background-color: #363a4f;
+}
+#custom-power.power-saver {
+  color: #a6da95;   /* green */
+}
+
+#custom-power.performance {
+  color: #ed8796;   /* red */
+}
+
+/* balanced intentionally NOT styled */
+/* so it inherits default #cad3f5 */
