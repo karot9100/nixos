@@ -14,6 +14,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Hostname
+  networking.hostName = "simon";
+
   # system stateVersion
   system.stateVersion = "25.11";
 
