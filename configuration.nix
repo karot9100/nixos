@@ -6,7 +6,6 @@ let
   hosts = {
     "simon" = ./hosts/simon;
     "optiplex" = ./hosts/server;
-    "nixos-server" = ./hosts/server;
   };
 in
 
