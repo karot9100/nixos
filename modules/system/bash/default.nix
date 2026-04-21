@@ -28,6 +28,40 @@
         HISTCONTROL=ignoredups:erasedups
 
         cd /etc/nixos
+      
+
+        debug-boot() {
+          echo "=== Boot timing ==="
+          systemd-analyze
+          echo -e "\n=== Top 15 slowest services ==="
+          systemd-analyze blame | head -15
+          echo -e "\n=== Critical chain ==="
+          systemd-analyze critical-chain
+          echo -e "\n=== Failed units ==="
+          systemctl --failed --no-pager
+          echo -e "\n=== Errors from current boot ==="
+          journalctl -b 0 -p err --no-pager
+          echo -e "\n=== NVIDIA/DRM messages ==="
+          journalctl -b 0 -k --no-pager | grep -iE "nvidia|drm|nouveau|modeset"
+          echo -e "\n=== Display manager ==="
+          journalctl -b 0 -u display-manager.service --no-pager
+          echo -e "\n=== User session (Hyprland) ==="
+          journalctl --user -b 0 --no-pager | tail -50
+          echo -e "\n=== Last 30 lines of current boot ==="
+          journalctl -b 0 --no-pager | tail -30
+        }
+        debug-boot-previous() {
+          echo "=== Errors from previous boot ==="
+          journalctl -b -1 -p err --no-pager
+          echo -e "\n=== NVIDIA/DRM messages ==="
+          journalctl -b -1 -k --no-pager | grep -iE "nvidia|drm|nouveau|modeset"
+          echo -e "\n=== Display manager ==="
+          journalctl -b -1 -u display-manager.service --no-pager
+          echo -e "\n=== User session (Hyprland) ==="
+          journalctl --user -b -1 --no-pager | tail -50
+          echo -e "\n=== Last 30 lines of previous boot ==="
+          journalctl -b -1 --no-pager | tail -30
+        }
       '';
 
       shellAliases = {
