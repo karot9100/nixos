@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../users/simon
+    ../../users/serveruser
     ../../profiles/optiplex
   ];
 
