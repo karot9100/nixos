@@ -10,6 +10,7 @@
     ./theme
     ./keyring
     ./main-user
+    ./smb-share
   ];
 
 }
