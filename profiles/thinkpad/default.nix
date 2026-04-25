@@ -5,6 +5,8 @@
   imports = [ 
     ../../modules 
     ../../users
+    ../../modules/hardware/cpu/amd
+    ../../modules/hardware/gpu/amd
   ];
   
   # Users

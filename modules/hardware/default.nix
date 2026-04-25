@@ -5,7 +5,7 @@
   imports = [
     ./input
     ./lenovo-legion
-    ./nvidia/nvidia-laptop
+    ./gpu/nvidia/nvidia-laptop
     ./power-management
     ./printing
     ./sensors
