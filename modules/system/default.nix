@@ -11,6 +11,7 @@
     ./keyring
     ./main-user
     ./smb-share
+    ./boot-animation
   ];
 
 }
