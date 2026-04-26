@@ -44,7 +44,7 @@ in
         CPU_HWP_DYN_BOOST_ON_AC       = 1;
 
         # Max CPU performance percentage
-        CPU_MAX_PERF_ON_BAT           = 50;
+        CPU_MAX_PERF_ON_BAT           = 100;
         CPU_MAX_PERF_ON_AC            = 100;
 
         # Platform profile
@@ -68,7 +68,7 @@ in
         STOP_CHARGE_THRESH_BAT0  = 100;
 
         # USB
-        USB_AUTOSUSPEND               = 1;
+        USB_AUTOSUSPEND               = 0;
       };
     };
 
