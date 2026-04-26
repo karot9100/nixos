@@ -1,8 +1,11 @@
-{ lib, ... }:
+{ lib, config, pkgs, ... }:
 
 {
 
-  config = {
+  options.mymodules.gpu-amd.enable = lib.mkEnableOption "Enable gpu amd";
+
+  config = lib.mkIf config.mymodules.gpu-amd.enable {
+
     services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
 
     hardware.graphics = {

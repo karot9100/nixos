@@ -52,11 +52,10 @@
 
   # Apps - Gaming
   mymodules.wine.enable			            = true;
-  mymodules.steam.enable		            = true;
-  mymodules.perm-pkgs.enable		        = true;
-  mymodules.gamemode.enable		          = true;
 
   # Hardware
+  mymodules.cpu-amd.enable              = true;
+  mymodules.gpu-amd.enable              = true;
   mymodules.input.enable		            = true;
   mymodules.power-management.enable	    = true;
   mymodules.power-management.amdPstate  = false;
