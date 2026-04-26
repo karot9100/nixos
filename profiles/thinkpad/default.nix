@@ -59,6 +59,7 @@
   # Hardware
   mymodules.input.enable		            = true;
   mymodules.power-management.enable	    = true;
+  mymodules.power-management.amdPstate  = false;
   mymodules.printing.enable 		        = true;
   mymodules.sensors.enable	          	= true;
   mymodules.sound.enable		            = true;

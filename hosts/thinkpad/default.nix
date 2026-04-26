@@ -15,7 +15,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Hostname
-  networking.hostName = "Thinkpad";
+  networking.hostName = "thinkpad";
 
   # system stateVersion
   system.stateVersion = "25.11";

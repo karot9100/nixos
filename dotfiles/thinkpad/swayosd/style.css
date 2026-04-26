@@ -1,0 +1,53 @@
+/* ~/.config/swayosd/style.css */
+@define-color base #24273a;
+@define-color surface0 #494d64;
+@define-color sky #91d7e3;
+@define-color text #cad3f5;
+
+window#osd {
+    background-color: @base;
+    border: 2px solid @surface0;
+    border-radius: 16px;
+    background-image: none;
+    /* Setting color here sets @theme_fg_color which GTK uses for symbolic icons */
+    color: @sky;
+}
+
+box#osd-box {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: @sky;
+}
+
+image#osd-icon {
+    color: @sky;
+    -gtk-icon-style: symbolic;
+    -gtk-icon-palette: default @sky, success @sky, warning @sky, error @sky;
+    background-color: transparent;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+label#osd-label {
+    color: @text;
+    margin-bottom: 5px;
+}
+
+progressbar#osd-bar {
+    color: @sky;
+}
+
+progressbar#osd-bar trough {
+    min-height: 10px;
+    border-radius: 100px;
+    background-color: @surface0;
+    background-image: none;
+    border: none;
+}
+
+progressbar#osd-bar progress {
+    border-radius: 100px;
+    background-color: @sky;
+    background-image: none;
+    border: none;
+}

@@ -1,13 +1,16 @@
 { lib, ... }:
 
 let
+
   hostname = lib.removeSuffix "\n" (builtins.readFile /etc/hostname);
 
   hosts = {
     "simon" = ./hosts/simon;
     "optiplex" = ./hosts/server;
     "Thinkpad" = ./hosts/thinkpad;
+    "thinkpad" = ./hosts/thinkpad;
   };
+
 in
 
 {

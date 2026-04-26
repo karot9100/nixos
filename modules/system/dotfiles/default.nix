@@ -2,6 +2,7 @@
 
 let
   user = config.mymodules.mainUser;
+  hostname = config.networking.hostName;
 in
 
 {
@@ -14,8 +15,10 @@ in
       mkdir -p /home/${user}/.config
 
       for d in waybar hypr fuzzel swayosd alacritty; do
-        rm -rf /home/${user}/.config/$d
-        ln -sf /etc/nixos/dotfiles/$d /home/${user}/.config/$d
+        if [ -d /etc/nixos/dotfiles/${hostname}/$d ]; then
+          rm -rf /home/${user}/.config/$d
+          ln -sf /etc/nixos/dotfiles/${hostname}/$d /home/${user}/.config/$d
+        fi
       done
     '';
 

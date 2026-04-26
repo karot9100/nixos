@@ -2,7 +2,9 @@
 
 {
 
-  options.mymodules.input.enable = lib.mkEnableOption "input";
+  options.mymodules.input = {
+    enable = lib.mkEnableOption "input";
+  };
 
   config = lib.mkIf config.mymodules.input.enable {
     environment.systemPackages = with pkgs; [
@@ -12,6 +14,10 @@
     ];
 
     services.ratbagd.enable = true;
+
+    services.libinput = {
+      enable = true;
+    };
 
   };
 
