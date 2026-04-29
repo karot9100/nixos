@@ -5,8 +5,8 @@
   imports = [ 
     ../../modules 
     ../../users
-    ../../modules/hardware/cpu/amd
-    ../../modules/hardware/gpu/amd
+    #../../modules/hardware/cpu/amd
+    #../../modules/hardware/gpu/amd
   ];
   
   # Users
@@ -29,6 +29,9 @@
   # Apps - Browsers
   mymodules.firefox.enable		          = true;
   mymodules.chromium.enable		          = true;
+
+  # Apps - Dev
+  mymodules.docker.enable               = true;
 
   # Apps - Editors
   mymodules.vim.enable			            = true;
@@ -58,7 +61,6 @@
   mymodules.gpu-amd.enable              = true;
   mymodules.input.enable		            = true;
   mymodules.power-management.enable	    = true;
-  mymodules.power-management.amdPstate  = false;
   mymodules.printing.enable 		        = true;
   mymodules.sensors.enable	          	= true;
   mymodules.sound.enable		            = true;

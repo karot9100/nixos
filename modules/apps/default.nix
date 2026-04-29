@@ -3,14 +3,23 @@
 {
 
   imports = [
-    ./browsers
-#    ./cli-tools
-    ./editors
-    ./file-browsers
-    ./gaming
-    ./media
-    ./office
-    ./terminals
+    ./alacritty
+    ./chromium
+    ./docker
+    ./firefox
+    ./gamemode
+    ./kitty
+    ./music
+    ./nautilus
+    ./permitted-packages
+    ./player-controls
+    ./screenshot
+    ./steam
+    ./thunar
+    ./thunderbird
+    ./video
+    ./vim
+    ./wine
   ];
 
 }

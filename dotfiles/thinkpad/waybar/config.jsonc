@@ -122,14 +122,6 @@
         "format-icons": ["", "", "", "", ""]
   },
 
-  "custom/power": {
-    "exec": "~/.config/waybar/scripts/power-profile.sh",
-    "interval": 2,
-    "return-type": "json",
-    "on-click": "~/.config/waybar/scripts/power-cycle.sh",
-    "format": "{text}"
-  },
-
   "tray": {
     "ignored-items": ["blueman"]
   }

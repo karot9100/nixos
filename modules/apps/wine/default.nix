@@ -7,7 +7,7 @@
   config = lib.mkIf config.mymodules.wine.enable {
 
     environment.systemPackages = with pkgs; [
-      wine
+      #wine
       wineWowPackages.stable
       winetricks
     ];
