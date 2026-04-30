@@ -71,6 +71,7 @@
         clean = "sudo nix-collect-garbage -d";
         youtube = "cd ~/Downloads && yt-dlp -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --embed-metadata";
         myconfig = ''find /etc/nixos -name "*.nix" | sort | xargs -I{} sh -c 'echo "=== {} ===" && cat {}' '';
+        optiplex = "ssh simon@192.168.0.44";
 
       };
 

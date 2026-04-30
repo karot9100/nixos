@@ -7,6 +7,7 @@
     ./desktop
     ./system
     ./hardware
+    ./services
   ];
 
 }

@@ -34,5 +34,11 @@ in
       options = commonOpts;
     };
 
+    fileSystems."/mnt/docker" = {
+      device = "//192.168.0.44/docker";
+      fsType = "cifs";
+      options = commonOpts;
+    };
+
   };
 }

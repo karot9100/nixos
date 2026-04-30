@@ -7,6 +7,7 @@
   config = lib.mkIf config.mymodules.docker.enable {
 
     virtualisation.docker.enable = true;
+    virtualisation.oci-containers.backend = "docker";
 
   };
 
