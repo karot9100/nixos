@@ -19,9 +19,13 @@ in
     services.tlp = {
       enable = true;
       settings = {
-        # CPU governor
+        # CPU governor Thinkpad
         CPU_SCALING_GOVERNOR_ON_BAT   = "schedutil";
         CPU_SCALING_GOVERNOR_ON_AC    = "schedutil";
+
+        # CPU governor LOQ
+        #CPU_SCALING_GOVERNOR_ON_BAT   = "powersave";
+        #CPU_SCALING_GOVERNOR_ON_AC    = "performance";
 
         # Energy/Performance Policy
         # Intel: HWP EPP hints. AMD: amd_pstate EPP. Same value names work on both.

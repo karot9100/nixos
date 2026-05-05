@@ -30,6 +30,9 @@
   mymodules.firefox.enable		          = true;
   mymodules.chromium.enable		          = true;
 
+  mymodules.emulators.enable            = true;
+  mymodules.gimp.enable                 = true;
+
   # Apps - Dev
   mymodules.docker.enable               = true;
 

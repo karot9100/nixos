@@ -9,6 +9,9 @@
     # Enable networking
     networking.networkmanager.enable = true;
 
+    # Modem Manager for sim card
+    networking.modemmanager.enable = true;
+
   };
 
 }

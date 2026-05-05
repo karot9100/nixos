@@ -2,9 +2,13 @@
 
 {
 
-  options.mymodules.docker.enable = lib.mkEnableOption "docker";
+  options = { 
+    mymodules.docker.enable = 
+      lib.mkEnableOption "docker";
+  };
 
-  config = lib.mkIf config.mymodules.docker.enable {
+  config = 
+    lib.mkIf config.mymodules.docker.enable {
 
     virtualisation.docker.enable = true;
     virtualisation.oci-containers.backend = "docker";

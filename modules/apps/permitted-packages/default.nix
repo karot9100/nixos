@@ -2,9 +2,13 @@
 
 {
 
-  options.mymodules.perm-pkgs.enable = lib.mkEnableOption "perm-pkgs";
+  options = {
+    mymodules.perm-pkgs.enable = 
+      lib.mkEnableOption "perm-pkgs";
+  };
 
-  config = lib.mkIf config.mymodules.perm-pkgs.enable {
+  config = 
+    lib.mkIf config.mymodules.perm-pkgs.enable {
       
     nixpkgs.config.permittedInsecurePackages = [
       

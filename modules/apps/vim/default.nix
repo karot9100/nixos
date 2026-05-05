@@ -16,6 +16,7 @@ in
   config = lib.mkIf config.mymodules.vim.enable {
 
     environment.systemPackages = [
+      pkgs.nixd
       (pkgs.vim-full.customize {
         name = "vim";
 

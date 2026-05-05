@@ -8,6 +8,7 @@
     ./docker
     ./firefox
     ./gamemode
+    ./gimp
     ./kitty
     ./music
     ./nautilus
@@ -20,6 +21,7 @@
     ./video
     ./vim
     ./wine
+    ./emulators
   ];
 
 }
